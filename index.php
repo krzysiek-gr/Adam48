@@ -1,7 +1,16 @@
+<?php
+	session_start();
+	if ((isset($_SESSION['zalogowany']))	&& ($_SESSION[''zalogowany]==true))	// isset = jeśli istnieje zmienna...&& = i jednocześnie
+	{
+		header('Location: gra.php');
+		exit();		// żeby program nie wykonywał dalszego kodu tylko od razu zakończył.
+	}
+?>
+
 <DOCTYPE HTML />
 <html lang="pl">
 <head>
-	<meta chartset="utf-8" />
+	<meta charset="utf-8" />
 	<meta http-equiv=X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Osadnicy - gra przeglądarkowa</title>
 </head>
@@ -14,6 +23,10 @@
 		Hasło:</br>	<input type="password" name="haslo"/> </br></br>
 		<input type="submit" value="Zaloguj się" />
 	</form>
+	
+<?php
+	if(isset($_SESSION['blad'])) echo $_SESSION['blad']; //Wyświetlenie błędu tylko w przypadku gdy zmienna istnieje w sesji.
+?>	
 
 </body>
 </html>
