@@ -13,7 +13,7 @@
 <body>
 <?php
 	
-	echo "<p>Witaj ".$_SESSION['user']."!</p>";
+	echo "<p>Witaj ".$_SESSION['user'].'! [<a href="logout.php">Wyloguj się!</a>]</p>';	// href= przekierowanie do pliku wylogowania
 	echo "<p><b>Drewno</b>: ".$_SESSION['drewno'];
 	echo "|<b>Kamień</b>: ".$_SESSION['kamien'];
 	echo "|<b>Zboże</b>: ".$_SESSION['zboze']."</p>";

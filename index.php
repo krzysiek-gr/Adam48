@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if ((isset($_SESSION['zalogowany']))	&& ($_SESSION[''zalogowany]==true))	// isset = jeśli istnieje zmienna...&& = i jednocześnie
+	if ((isset($_SESSION['zalogowany']))	&& ($_SESSION['zalogowany']==true))	// isset = jeśli istnieje zmienna...&& = i jednocześnie
 	{
 		header('Location: gra.php');
 		exit();		// żeby program nie wykonywał dalszego kodu tylko od razu zakończył.
